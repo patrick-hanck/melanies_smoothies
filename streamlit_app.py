@@ -17,6 +17,7 @@ st.write("Name on Smoothie will be:",input_name)
 import requests
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 st.text(smoothiefroot_response.json())
+sf_sf = st.dataframe(smoothiefroot_response.json(), use_container_width = True)
 
 # multi-select fruit ingredients
 cnx = st.connection("snowflake")

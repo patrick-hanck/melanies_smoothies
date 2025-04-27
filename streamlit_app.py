@@ -14,6 +14,9 @@ st.write(
 # input name
 input_name = st.text_input('Name on Smoothie')
 st.write("Name on Smoothie will be:",input_name)
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
 
 # multi-select fruit ingredients
 cnx = st.connection("snowflake")

@@ -16,7 +16,7 @@ input_name = st.text_input('Name on Smoothie')
 st.write("Name on Smoothie will be:",input_name)
 
 # multi-select fruit ingredients
-cnx = st.connection("snowflake")
+cnx = st.connection("snow")
 session = cnx.session()
 #session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
